@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta/Gambetta-Regular.woff2") format("woff2"),
+       url("/fonts/Gambetta/Gambetta-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta/Gambetta-Bold.woff2") format("woff2"),
+       url("/fonts/Gambetta/Gambetta-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Add other font styles/weights as needed */
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-gambetta: "Gambetta", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-gambetta {
+  font-family: var(--font-gambetta);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+
+body{
+@apply m-0 p-0 bg-[#F8F8F8] text-[#545454]
+}
+
+
+.background_image {
+    background-image: url("https://maybee-nextjs-ecommerce.s3.amazonaws.com/1705929772415.jpg");
+    background-position: center;
+    background-size: cover;
 }
